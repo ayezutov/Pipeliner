@@ -1,0 +1,86 @@
+.pipeline>DIV{
+	float:left;
+	width: 120px;
+	height: 70px;
+}
+
+.pipeline .pipeline-step{
+	border: solid 1px silver;
+    border-radius: 5px;
+}
+
+.pipeline .pipeline-step h4{
+	padding: 2px 5px;
+	margin:0px;
+}
+
+.pipeline .pipeline-step .pipeline-step-content{
+	padding: 2px;
+}
+
+.pipeline .pipeline-step.success h4{
+	background-image: url('images/step-header-green.png');
+    background-color: #7BE649;
+}
+.pipeline .pipeline-step.success{
+    background-color: #DBFFC9;
+    border-color: #00C613;
+}
+.pipeline .pipeline-step.failure h4{
+	background-image: url('images/step-header-red.png');
+    background-color: #FF4E42;
+}
+.pipeline .pipeline-step.failure{
+    background-color: #FFF4F4;
+    border-color: #CE2727;
+}
+
+.pipeline .pipeline-step.not-started h4{
+	background-image: url('images/step-header-grey.png');
+    background-color: #C0C0C0;
+}
+.pipeline .pipeline-step.not-started{
+    background-color: #EFEFEF;
+    border-color: #999999;
+}
+
+.pipeline .pipeline-step.executing h4{
+	background-image: url('images/step-header-blue.png');
+    background-color: #499FBE;
+}
+.pipeline .pipeline-step.executing{
+    background-color: #EFF9FF;
+    border-color: #3D859E;
+}
+
+.pipeline .pipeline-transition
+{
+    width: 60px;
+}
+
+.pipeline .pipeline-transition.manual
+{
+    width: 90px;
+}
+
+.pipeline-transition.active
+{
+    background: url('images/arrow-green.png') center no-repeat;
+ }
+
+.pipeline-transition.inactive
+{
+    background: url('images/arrow-grey.png') center no-repeat;
+ }
+.pipeline-transition.manual.active
+{
+    background: url('images/arrow-play-green-5.png') center no-repeat;
+}
+.pipeline-transition.manual.inactive
+{
+    background: url('images/arrow-play-grey-5.png') center no-repeat;
+}
+.pipeline-transition.manual.clickable
+{
+    background: url('images/arrow-play-green-orange-5.png') center no-repeat;
+}
