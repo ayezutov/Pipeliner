@@ -1,3 +1,111 @@
+body {
+    font-family: Verdana, Arial;
+    font-size: 15px;
+}
+.header {
+    font-size: 35px;
+    font-weight: bold;
+    color: #308cac;
+    margin: 20px 5px;
+}
+.pipeline-dashboard-header {
+    font-weight: bold;
+    font-size: 13px;
+    color: #267089;
+}
+.pipeline-dashboard-header .pipeline .pipeline-step {
+    background: transparent;
+    border: transparent 1px solid;
+    white-space: normal;
+    margin-left: 1px;
+    height: auto;
+}
+.pipeline-dashboard-header .pipeline .pipeline-transition {
+    background: transparent;
+    margin-left: 1px;
+}
+
+.pipeline{
+    white-space: nowrap;
+    margin-top: 15px;
+}
+
+.pipeline>DIV{
+    display: inline-block;
+    height: 30px;
+    vertical-align: top;
+}
+
+.pipeline-name {
+    width: 100px;
+}
+.pipeline-name DIV {
+    height: 100%;
+    padding: 5px;
+}
+
+.pipeline-step {
+    border-radius: 5px;
+    border: silver 1px solid;
+    width: 100px;
+    overflow: hidden;
+}
+
+.pipeline-step img {
+    width: 0;
+    height: 0;
+}
+
+.pipeline-transition {
+    background: url('images/arrow-grey-3.png') center no-repeat;
+    width: 30px;
+}
+
+.pipeline-transition.success{
+    background: url('images/arrow-green-2.png') center no-repeat;
+}
+
+.pipeline-transition.stopped{
+    background: url('images/stop-icon.gif') center no-repeat;
+}
+
+.pipeline-step.success {
+	background-image: url('images/step-header-green.png');
+    background-color: #8bfa3f;
+    border-color: #66b82d;
+}
+
+.pipeline-step.failed {
+	background-image: url('images/step-header-red.png');
+    background-color: #FF4E42;
+    border-color: #CE2727;
+}
+
+
+.pipeline-step.pending{
+	background-image: url('images/step-header-grey.png');
+    /*background-color: #dedede;*/
+    background-color: #EFEFEF;
+    border-color: #999999;
+}
+
+.pipeline-step.manual{
+	background-image: url('images/step-header-yellow.png');
+    background-color: #f9fc1c;
+    border-color: #c9cb17;
+}
+.pipeline-step.running {
+	/*background-image: url('images/step-header-blue.png');*/
+    /*background-color: #499FBE;*/
+    background-color: #EFF9FF;
+    border-color: #6dc5e4;
+}
+.pipeline-step.running IMG{
+    height: 32px;
+    width: auto;
+}
+
+/*
 .pipeline>DIV{
 	width: 120px;
 	height: 70px;
@@ -116,3 +224,5 @@ div#sub > div#ranking {
     margin-left:5px;
     background-color:#f3e1bb;
 }
+
+    */

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pipeliner 2</title>
+    <link href="pipeliner2.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header">Pipeliner</div>
+    <div class="pipeline-dashboard">
+        <div class="pipeline-dashboard-header">
+            <div class="pipeline">
+                <div class="pipeline-name">
+                </div>
+
+                <div class="pipeline-step">
+                    Create binaries and upload them to NuGet
+                </div>
+                <div class="pipeline-transition"></div>
+
+                <div class="pipeline-step">
+                    Automatic unit test
+                </div>
+                <div class="pipeline-transition"></div>
+
+                <div class="pipeline-step">
+                    Manual smoke
+                </div>
+                <div class="pipeline-transition"></div>
+
+                <div class="pipeline-step">
+                    Release to QA
+                </div>
+            </div>
+        </div>
+        <div class="pipeline">
+            <div class="pipeline-name">
+                <div>40010</div>
+            </div>
+
+            <div class="pipeline-step running" data-step-id="12">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition inactive"></div>
+
+            <div class="pipeline-step pending" data-step-id="13">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition inactive"></div>
+
+            <div class="pipeline-step pending" data-step-id="14">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition inactive"></div>
+
+            <div class="pipeline-step pending" data-step-id="15">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+        </div>
+        <div class="pipeline">
+            <div class="pipeline-name">
+                <div>40009</div>
+            </div>
+
+            <div class="pipeline-step success" data-step-id="12">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition success"></div>
+
+            <div class="pipeline-step success" data-step-id="13">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition success"></div>
+
+            <div class="pipeline-step running" data-step-id="14">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition inactive"></div>
+
+            <div class="pipeline-step pending" data-step-id="15">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+        </div>
+        <div class="pipeline">
+            <div class="pipeline-name">
+                <div>40008</div>
+            </div>
+
+            <div class="pipeline-step success" data-step-id="12">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition success"></div>
+
+            <div class="pipeline-step failed" data-step-id="13">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition stopped"></div>
+
+            <div class="pipeline-step pending" data-step-id="14">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition inactive"></div>
+
+            <div class="pipeline-step pending" data-step-id="15">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+        </div>
+        <div class="pipeline">
+            <div class="pipeline-name">
+                <div>40007</div>
+            </div>
+
+            <div class="pipeline-step success" data-step-id="12">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition success"></div>
+
+            <div class="pipeline-step success" data-step-id="13">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition success"></div>
+
+            <div class="pipeline-step manual" data-step-id="14">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition inactive"></div>
+
+            <div class="pipeline-step pending" data-step-id="15">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+        </div>
+        <div class="pipeline">
+            <div class="pipeline-name">
+                <div>40006</div>
+            </div>
+
+            <div class="pipeline-step success" data-step-id="12">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition success"></div>
+
+            <div class="pipeline-step success" data-step-id="13">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition success"></div>
+
+            <div class="pipeline-step success" data-step-id="14">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <div class="pipeline-transition success"></div>
+
+            <div class="pipeline-step success" data-step-id="15">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
