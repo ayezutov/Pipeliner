@@ -69,6 +69,10 @@ body {
     background: url('images/stop-icon.gif') center no-repeat;
 }
 
+.pipeline-transition.manual{
+    background: url('images/arrow-orange-3.png') center no-repeat;
+}
+
 .pipeline-step.success {
 	background-image: url('images/step-header-green.png');
     background-color: #8bfa3f;

@@ -3,11 +3,16 @@
 <head>
     <title>Pipeliner 2</title>
     <link href="pipeliner2.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.8.2.min.js"></script>
+    <script src="scripts/jquery-ui-1.8.24.min.js"></script>
+    <script src="scripts/pipeliner.data.js"></script>
+    <script src="scripts/knockout-2.2.0.debug.js"></script>
+    <script src="scripts/pipeliner.js"></script>
 </head>
 
 <body>
     <div class="header">Pipeliner</div>
-    <div class="pipeline-dashboard">
+    <!--<div class="pipeline-dashboard">
         <div class="pipeline-dashboard-header">
             <div class="pipeline">
                 <div class="pipeline-name">
@@ -147,12 +152,43 @@
             <div class="pipeline-step success" data-step-id="14">
                 <img src="images/progress-3.gif" alt="progress" />
             </div>
-            <div class="pipeline-transition success"></div>
+            <div class="pipeline-transition manual"></div>
 
             <div class="pipeline-step success" data-step-id="15">
                 <img src="images/progress-3.gif" alt="progress" />
             </div>
         </div>
+    </div>-->
+
+    <div class="pipeline-dashboard">
+        <div class="pipeline-dashboard-header" data-bind="with: pipelineDescription">
+            <div class="pipeline">
+                <div class="pipeline-name">
+                </div>
+
+                <!-- ko foreach: steps -->
+                <div class="pipeline-step" data-bind="text: name"></div>
+                <!-- ko if: ($index() !== ($parent.steps.length - 1)) -->
+                <div class="pipeline-transition"></div>
+                <!-- /ko -->
+                <!-- /ko -->
+            </div>
+        </div>
+        <!-- ko foreach: pipelineInstances -->
+        <div class="pipeline">
+            <div class="pipeline-name" data-bind="text: parameters.changeSet">
+            </div>
+
+            <!-- ko foreach: steps -->
+            <div class="pipeline-step" data-bind="attr: { 'class': 'pipeline-step ' + status }">
+                <img src="images/progress-3.gif" alt="progress" />
+            </div>
+            <!-- ko if: ($index() !== ($parent.steps.length - 1)) -->
+            <div class="pipeline-transition" data-bind="attr: { 'class': 'pipeline-transition ' + transition.status }"></div>
+            <!-- /ko -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
     </div>
 </body>
 </html>
