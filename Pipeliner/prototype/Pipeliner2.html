@@ -7,159 +7,13 @@
     <script src="scripts/jquery-ui-1.8.24.min.js"></script>
     <script src="scripts/pipeliner.data.js"></script>
     <script src="scripts/knockout-2.2.0.debug.js"></script>
+    <script src="scripts/knockout.mapping-latest.js"></script>
     <script src="scripts/pipeliner.js"></script>
 </head>
 
 <body>
     <div class="header">Pipeliner</div>
-    <!--<div class="pipeline-dashboard">
-        <div class="pipeline-dashboard-header">
-            <div class="pipeline">
-                <div class="pipeline-name">
-                </div>
-
-                <div class="pipeline-step">
-                    Create binaries and upload them to NuGet
-                </div>
-                <div class="pipeline-transition"></div>
-
-                <div class="pipeline-step">
-                    Automatic unit test
-                </div>
-                <div class="pipeline-transition"></div>
-
-                <div class="pipeline-step">
-                    Manual smoke
-                </div>
-                <div class="pipeline-transition"></div>
-
-                <div class="pipeline-step">
-                    Release to QA
-                </div>
-            </div>
-        </div>
-        <div class="pipeline">
-            <div class="pipeline-name">
-                <div>40010</div>
-            </div>
-
-            <div class="pipeline-step running" data-step-id="12">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition inactive"></div>
-
-            <div class="pipeline-step pending" data-step-id="13">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition inactive"></div>
-
-            <div class="pipeline-step pending" data-step-id="14">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition inactive"></div>
-
-            <div class="pipeline-step pending" data-step-id="15">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-        </div>
-        <div class="pipeline">
-            <div class="pipeline-name">
-                <div>40009</div>
-            </div>
-
-            <div class="pipeline-step success" data-step-id="12">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition success"></div>
-
-            <div class="pipeline-step success" data-step-id="13">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition success"></div>
-
-            <div class="pipeline-step running" data-step-id="14">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition inactive"></div>
-
-            <div class="pipeline-step pending" data-step-id="15">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-        </div>
-        <div class="pipeline">
-            <div class="pipeline-name">
-                <div>40008</div>
-            </div>
-
-            <div class="pipeline-step success" data-step-id="12">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition success"></div>
-
-            <div class="pipeline-step failed" data-step-id="13">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition stopped"></div>
-
-            <div class="pipeline-step pending" data-step-id="14">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition inactive"></div>
-
-            <div class="pipeline-step pending" data-step-id="15">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-        </div>
-        <div class="pipeline">
-            <div class="pipeline-name">
-                <div>40007</div>
-            </div>
-
-            <div class="pipeline-step success" data-step-id="12">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition success"></div>
-
-            <div class="pipeline-step success" data-step-id="13">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition success"></div>
-
-            <div class="pipeline-step manual" data-step-id="14">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition inactive"></div>
-
-            <div class="pipeline-step pending" data-step-id="15">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-        </div>
-        <div class="pipeline">
-            <div class="pipeline-name">
-                <div>40006</div>
-            </div>
-
-            <div class="pipeline-step success" data-step-id="12">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition success"></div>
-
-            <div class="pipeline-step success" data-step-id="13">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition success"></div>
-
-            <div class="pipeline-step success" data-step-id="14">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-            <div class="pipeline-transition manual"></div>
-
-            <div class="pipeline-step success" data-step-id="15">
-                <img src="images/progress-3.gif" alt="progress" />
-            </div>
-        </div>
-    </div>-->
-
+    
     <div class="pipeline-dashboard">
         <div class="pipeline-dashboard-header" data-bind="with: pipelineDescription">
             <div class="pipeline">
@@ -175,16 +29,16 @@
             </div>
         </div>
         <!-- ko foreach: pipelineInstances -->
-        <div class="pipeline">
+        <div class="pipeline" data-bind="">
             <div class="pipeline-name" data-bind="text: parameters.changeSet">
             </div>
 
             <!-- ko foreach: steps -->
-            <div class="pipeline-step" data-bind="attr: { 'class': 'pipeline-step ' + status }">
+            <div class="pipeline-step" data-bind="attr: { 'class': 'pipeline-step ' + status() }">
                 <img src="images/progress-3.gif" alt="progress" />
             </div>
-            <!-- ko if: ($index() !== ($parent.steps.length - 1)) -->
-            <div class="pipeline-transition" data-bind="attr: { 'class': 'pipeline-transition ' + transition.status }"></div>
+            <!-- ko if: ($index() !== ($parent.steps().length - 1)) -->
+            <div class="pipeline-transition" data-bind="attr: { 'class': 'pipeline-transition ' + transition.status() }"></div>
             <!-- /ko -->
             <!-- /ko -->
         </div>

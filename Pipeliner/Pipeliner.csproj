@@ -239,6 +239,7 @@
     <Content Include="prototype\pipeliner.css" />
     <Content Include="prototype\pipeliner.htm" />
     <Content Include="prototype\Pipeliner2.html" />
+    <Content Include="prototype\scripts\knockout.mapping-latest.js" />
     <Content Include="prototype\scripts\pipeliner.data.js" />
     <Content Include="prototype\scripts\pipeliner.js" />
     <Content Include="prototype\scripts\jquery-1.8.2.js" />

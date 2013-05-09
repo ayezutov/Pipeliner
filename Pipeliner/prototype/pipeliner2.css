@@ -71,6 +71,7 @@ body {
 
 .pipeline-transition.manual{
     background: url('images/arrow-orange-3.png') center no-repeat;
+    cursor: pointer;
 }
 
 .pipeline-step.success {
@@ -99,134 +100,13 @@ body {
     border-color: #c9cb17;
 }
 .pipeline-step.running {
-	/*background-image: url('images/step-header-blue.png');*/
+	background-image: url('images/step-header-blue.png');
     /*background-color: #499FBE;*/
     background-color: #EFF9FF;
     border-color: #6dc5e4;
 }
-.pipeline-step.running IMG{
-    height: 32px;
+.pipeline-step.running IMG, .pipeline-step.manual IMG{
+    height: 10px;
     width: auto;
+    margin-top: 20px;
 }
-
-/*
-.pipeline>DIV{
-	width: 120px;
-	height: 70px;
-    white-space: normal;
-    margin: 0;
-    padding: 0;
-}
-
-.pipeline {
-    background-color: yellow;
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    display: inline-block;
-}
-
-.pipeline .pipeline-step{
-	border: solid 1px silver;
-    border-radius: 5px;
-    height: 72px;
-}
-
-.pipeline .pipeline-step .pipeline-step-header{
-}
-
-.pipeline .pipeline-step .pipeline-step-content{
-	padding: 2px;
-}
-
-.pipeline .pipeline-step.success .pipeline-step-header{
-	background-image: url('images/step-header-green.png');
-    background-color: #7BE649;
-}
-.pipeline .pipeline-step.success{
-    background-color: #DBFFC9;
-    border-color: #00C613;
-}
-.pipeline .pipeline-step.failure .pipeline-step-header{
-	background-image: url('images/step-header-red.png');
-    background-color: #FF4E42;
-}
-.pipeline .pipeline-step.failure{
-    background-color: #FFF4F4;
-    border-color: #CE2727;
-}
-
-.pipeline .pipeline-step.not-started .pipeline-step-header{
-	background-image: url('images/step-header-grey.png');
-    background-color: #C0C0C0;
-}
-.pipeline .pipeline-step.not-started{
-    background-color: #EFEFEF;
-    border-color: #999999;
-}
-
-.pipeline .pipeline-step.executing .pipeline-step-header{
-	background-image: url('images/step-header-blue.png');
-    background-color: #499FBE;
-}
-.pipeline .pipeline-step.executing{
-    background-color: #EFF9FF;
-    border-color: #3D859E;
-}
-
-.pipeline .pipeline-transition
-{
-    width: 60px;
-    height: 72px;
-}
-
-.pipeline .pipeline-transition.manual
-{
-    width: 90px;
-}
-
-.pipeline-transition.active
-{
-    background: url('images/arrow-green.png') center no-repeat;
- }
-
-.pipeline-transition.inactive
-{
-    background: url('images/arrow-grey.png') center no-repeat;
- }
-.pipeline-transition.manual.active
-{
-    background: url('images/arrow-play-green-5.png') center no-repeat;
-}
-.pipeline-transition.manual.inactive
-{
-    background: url('images/arrow-play-grey-5.png') center no-repeat;
-}
-.pipeline-transition.manual.clickable
-{
-    background: url('images/arrow-play-green-orange-5.png') center no-repeat;
-}
-
-.pipeline2 {
-    position:relative;
-    top:42px;
-    left:7px;
-    width:722px;
-    height:125px;
-    overflow-x:auto;
-    overflow-y:hidden;
-    white-space: nowrap;
-}
-
-div#sub > div#ranking {
-
-}
-.pipeline2 > div {
-    display: inline-block;
-    width:67px;
-    height:120px;
-    margin-left:5px;
-    background-color:#f3e1bb;
-}
-
-    */
