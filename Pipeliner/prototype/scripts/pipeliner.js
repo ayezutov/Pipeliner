@@ -1,9 +1,32 @@
 ﻿(function ($, window) {
+
+    var idMappingFunction = function (item) {
+        return ko.utils.unwrapObservable(item.id);
+    }
+
+    var mapping = {
+        pipelineDescription: {
+            create: function (data) {
+                return ko.mapping.fromJS(data.data, {
+                    steps: { key: idMappingFunction }
+                });
+            }
+        },
+        pipelineInstances: {
+            key: idMappingFunction,
+            create: function (data) {
+                return ko.mapping.fromJS(data.data, {
+                    steps: { key: idMappingFunction }
+                });
+            }
+        }
+    };
+
     $(document).ready(function () {
-        var model = ko.mapping.fromJS(window.pipelinerData);
+        var model = ko.mapping.fromJS(window.pipelinerData, mapping);
         ko.applyBindings(model);
         
-        $(".pipeline-transition.manual").click(function (e) {
+        $(document).on("click", ".pipeline-transition.manual", function (e) {
             alert("Clicked!");
         });
         
@@ -22,7 +45,7 @@
 
             i++;
 
-            ko.mapping.fromJS(window.pipelinerData, model);
+            ko.mapping.fromJS(window.pipelinerData, mapping, model);
 
             if (i <= 2)
                 setTimeout(emulate, 3000);
