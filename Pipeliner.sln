@@ -14,6 +14,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipeliner.Tests", "Pipeline
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipeliner.Business.Tests", "Pipeliner.Business.Tests\Pipeliner.Business.Tests.csproj", "{E71830FA-CA0E-4577-9B83-32C5F78C938D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{54EABB16-468D-47A7-9186-9DA2FBCA4FCF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipeliner.Runner", "Pipeliner.Runner\Pipeliner.Runner.csproj", "{1A1FD364-AB86-4B92-8841-DE4B8C4CE818}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +45,10 @@ Global
 		{E71830FA-CA0E-4577-9B83-32C5F78C938D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E71830FA-CA0E-4577-9B83-32C5F78C938D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E71830FA-CA0E-4577-9B83-32C5F78C938D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1FD364-AB86-4B92-8841-DE4B8C4CE818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1FD364-AB86-4B92-8841-DE4B8C4CE818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1FD364-AB86-4B92-8841-DE4B8C4CE818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1FD364-AB86-4B92-8841-DE4B8C4CE818}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

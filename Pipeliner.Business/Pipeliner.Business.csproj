@@ -41,15 +41,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationRunner.cs" />
     <Compile Include="IInstanceCreator.cs" />
     <Compile Include="InstanceCreateEventArgs.cs" />
     <Compile Include="IPipelineStarter.cs" />
     <Compile Include="PipelineDescription.cs" />
-    <Compile Include="PipelineDescriptionValidator.cs" />
+    <Compile Include="PipelineDescriptionValidators\PipelineDescriptionValidator.cs" />
+    <Compile Include="PipelineDescriptionValidators\IValidator.cs" />
+    <Compile Include="PipelineDescriptionValidators\PipelineDescriptionValidatorForImmediateFields.cs" />
+    <Compile Include="PipelineDescriptionValidators\PipelineDescriptionValidatorForSteps.cs" />
     <Compile Include="PipelineInstance.cs" />
     <Compile Include="PipelineRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ValidationResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

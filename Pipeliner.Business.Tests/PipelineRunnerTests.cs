@@ -57,7 +57,7 @@ namespace Pipeliner.Business.Tests
 
             starter.EmulatePipelineInstanceEvent(new InstanceCreateEventArgs
             {
-                Parameters = {{"TestParam1", "XXX"}, {"TestParam2", "YYY"}}
+                Parameters = { { "TestParam1", "XXX" }, { "TestParam2", "YYY" } }
             });
 
             storage.Received(1).AddPipeline(Arg.Any<PipelineInstance>());
