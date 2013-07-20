@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pipeliner.Runner.Properties {
+namespace Pipeliner {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Pipeliner.Runner.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class Pipeliner_Web {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Pipeliner_Web() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Pipeliner.Runner.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pipeliner.Runner.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pipeliner.Pipeliner.Web", typeof(Pipeliner_Web).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,11 @@ namespace Pipeliner.Runner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please type in &apos;exit&apos; followed by cariage return to exit the console mode.
+        ///   Looks up a localized string similar to An unhandled exception occurred in Pipeliner web application.
         /// </summary>
-        internal static string ServiceProgram_HintForExit {
+        internal static string MvcApplication_UnhandledException {
             get {
-                return ResourceManager.GetString("ServiceProgram_HintForExit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An unhandled exception occurred in Pipeliner service.
-        /// </summary>
-        internal static string ServiceProgram_UnhandledExceptionMessage {
-            get {
-                return ResourceManager.GetString("ServiceProgram_UnhandledExceptionMessage", resourceCulture);
+                return ResourceManager.GetString("MvcApplication_UnhandledException", resourceCulture);
             }
         }
     }

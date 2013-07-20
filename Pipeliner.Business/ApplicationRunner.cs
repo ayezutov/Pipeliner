@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Pipeliner.Business
+﻿namespace Pipeliner.Business
 {
     public class ApplicationRunner
     {
