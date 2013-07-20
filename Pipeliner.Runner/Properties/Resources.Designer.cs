@@ -68,5 +68,14 @@ namespace Pipeliner.Runner.Properties {
                 return ResourceManager.GetString("ServiceProgram_HintForExit", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unhandled exception occurred in Pipeliner.
+        /// </summary>
+        internal static string ServiceProgram_UnhandledExceptionMessage {
+            get {
+                return ResourceManager.GetString("ServiceProgram_UnhandledExceptionMessage", resourceCulture);
+            }
+        }
     }
 }

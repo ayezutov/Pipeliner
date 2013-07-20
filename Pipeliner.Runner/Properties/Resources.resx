@@ -101,4 +101,7 @@
   <data name="ServiceProgram_HintForExit" xml:space="preserve">
     <value>Please type in 'exit' followed by cariage return to exit the console mode</value>
   </data>
+  <data name="ServiceProgram_UnhandledExceptionMessage" xml:space="preserve">
+    <value>An unhandled exception occurred in Pipeliner</value>
+  </data>
 </root>

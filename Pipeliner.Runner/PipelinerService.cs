@@ -9,11 +9,11 @@ namespace Pipeliner.Runner
             InitializeComponent();
         }
 
-        protected override void OnStart(string[] args)
+        protected override void OnStop()
         {
         }
 
-        protected override void OnStop()
+        protected override void OnStart(string[] args)
         {
         }
     }
