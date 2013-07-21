@@ -1,4 +1,6 @@
-﻿namespace Pipeliner.Business
+﻿using Pipeliner.Business.Configuration;
+
+namespace Pipeliner.Business
 {
     public class ApplicationRunner
     {
@@ -7,9 +9,5 @@
         public void Run()
         {
         }
-    }
-
-    internal interface IPipelineConfigurationReader
-    {
     }
 }

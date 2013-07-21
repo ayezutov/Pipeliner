@@ -23,7 +23,7 @@ namespace Pipeliner.Business.Tests
             instanceCreator.CreateInstance().Returns(info => new PipelineInstance());
 
             var container = new TestContainerRegistrations()
-                .GetPreconfiguredBuilder(builder =>
+                .GetPreconfiguredContainer(builder =>
                 {
                     builder.RegisterInstance(starter);
                     builder.RegisterInstance(instanceCreator);

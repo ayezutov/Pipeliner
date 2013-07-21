@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\PipelineConfigurationReaderTests.cs" />
     <Compile Include="Fixtures\ExtensionMethods.cs" />
     <Compile Include="Fixtures\TestContainerRegistrations.cs" />
     <Compile Include="PipelineDescriptionValidators\PipelineDescriptionValidatorForImmediateFieldsTests.cs" />
@@ -70,6 +71,10 @@
     <ProjectReference Include="..\Pipeliner.Business\Pipeliner.Business.csproj">
       <Project>{76919AB0-BBC2-4289-A47A-76C31F2FCD81}</Project>
       <Name>Pipeliner.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pipeliner.DataAccess\Pipeliner.DataAccess.csproj">
+      <Project>{979488E0-3B1C-4C5D-AEAC-384B69D4B1B2}</Project>
+      <Name>Pipeliner.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
