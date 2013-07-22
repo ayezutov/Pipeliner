@@ -1,17 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PipelineDescriptionValidatorForImmediateFieldsTests.cs" company="">
-//   
-// </copyright>
-// <summary>
-//   The pipeline description validator for immediate fields tests.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-
-
-using System.Collections.Generic;
-using NSubstitute;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Pipeliner.Business.Configuration;
 using Pipeliner.Business.PipelineDescriptionValidators;
 
@@ -54,13 +41,9 @@ namespace Pipeliner.Business.Tests.PipelineDescriptionValidators
         [Test]
         public void EnsureThatListOfStepsIsNotEmpty()
         {
-            var result = validator.Validate(new PipelineDescription
-                                                {
-                                                    Steps = new List<IPipelineStepDescription>()
-                                                });
+            var result = validator.Validate(new PipelineDescription());
 
             Assert.That(result.IsValid, Is.EqualTo(false));
         }
-
     }
 }

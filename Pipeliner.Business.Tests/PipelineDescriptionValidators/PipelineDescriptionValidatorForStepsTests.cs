@@ -37,10 +37,7 @@ namespace Pipeliner.Business.Tests.PipelineDescriptionValidators
 
             var result = validator.Validate(new PipelineDescription
                                                 {
-                                                    Steps = new List<IPipelineStepDescription>
-                                                                {
-                                                                    step
-                                                                }
+                                                    Steps = { step }
                                                 });
 
             Assert.That(result.IsValid, Is.EqualTo(true));
@@ -57,10 +54,7 @@ namespace Pipeliner.Business.Tests.PipelineDescriptionValidators
 
             var result = validator.Validate(new PipelineDescription
                                                 {
-                                                    Steps = new List<IPipelineStepDescription>
-                                                                {
-                                                                    step
-                                                                }
+                                                    Steps = { step }
                                                 });
 
             Assert.That(result.IsValid, Is.EqualTo(false));

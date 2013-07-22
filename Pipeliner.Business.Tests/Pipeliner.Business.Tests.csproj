@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\PipelineConfigurationReaderTests.cs" />
+    <Compile Include="ExtensibilityTesting\CustomPipelineStarter.cs" />
+    <Compile Include="ExtensibilityTesting\CustomPipelineStep.cs" />
     <Compile Include="Fixtures\ExtensionMethods.cs" />
     <Compile Include="Fixtures\TestContainerRegistrations.cs" />
     <Compile Include="PipelineDescriptionValidators\PipelineDescriptionValidatorForImmediateFieldsTests.cs" />
