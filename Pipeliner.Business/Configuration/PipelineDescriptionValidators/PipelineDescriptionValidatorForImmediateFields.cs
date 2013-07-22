@@ -1,4 +1,5 @@
-﻿using Pipeliner.Business.Properties;
+﻿using Pipeliner.Business.Configuration;
+using Pipeliner.Business.Properties;
 
 namespace Pipeliner.Business.PipelineDescriptionValidators
 {

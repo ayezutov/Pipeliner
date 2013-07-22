@@ -42,6 +42,21 @@ namespace Pipeliner.Business.Tests.Configuration
             Assert.That(configuration, Is.Not.Null);
         }
 
+        [Test]
+        public void CanReadConfigurationWithPipelineDescriptions()
+        {
+            stream = GetStream(@"
+<PipelineConfiguration xmlns=""clr-namespace:Pipeliner.Business.Configuration;assembly=Pipeliner.Business"">
+    <PipelineDescription Name=""Pipeline1""></PipelineDescription>
+    <PipelineDescription Name=""Pipeline2""></PipelineDescription>
+</PipelineConfiguration>
+");
+
+            var configuration = reader.Read(FileName);
+
+            Assert.That(configuration, Is.Not.Null);
+        }
+
         private Stream GetStream(string s)
         {
             return new MemoryStream(Encoding.UTF8.GetBytes(s));

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Pipeliner.Business.Configuration;
 using Pipeliner.Business.Properties;
 
 namespace Pipeliner.Business.PipelineDescriptionValidators

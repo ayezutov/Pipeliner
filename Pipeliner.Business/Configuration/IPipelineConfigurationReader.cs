@@ -4,9 +4,4 @@
     {
         PipelineConfiguration Read(string fileName);
     }
-
-    public class PipelineConfiguration
-    {
-
-    }
 }

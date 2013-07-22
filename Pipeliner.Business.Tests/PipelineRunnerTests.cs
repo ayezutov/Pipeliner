@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using NSubstitute;
 using NUnit.Framework;
+using Pipeliner.Business.Configuration;
 using Pipeliner.Business.Tests.Fixtures;
 
 namespace Pipeliner.Business.Tests

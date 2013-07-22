@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationRunner.cs" />
+    <Compile Include="Configuration\IPipelineStepDescription.cs" />
+    <Compile Include="Configuration\PipelineConfiguration.cs" />
     <Compile Include="Configuration\PipelineConfigurationReader.cs" />
+    <Compile Include="Configuration\PipelineDescription.cs" />
     <Compile Include="IInstanceCreator.cs" />
     <Compile Include="InstanceCreateEventArgs.cs" />
     <Compile Include="Configuration\IPipelineConfigurationReader.cs" />

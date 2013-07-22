@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Pipeliner.Business.Configuration;
 
 namespace Pipeliner.Business.PipelineDescriptionValidators
 {

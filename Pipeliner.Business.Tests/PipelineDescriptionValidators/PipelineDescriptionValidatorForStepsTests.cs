@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using NSubstitute;
 using NUnit.Framework;
+using Pipeliner.Business.Configuration;
 using Pipeliner.Business.PipelineDescriptionValidators;
 
 namespace Pipeliner.Business.Tests.PipelineDescriptionValidators
