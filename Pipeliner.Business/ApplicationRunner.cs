@@ -9,5 +9,9 @@ namespace Pipeliner.Business
         public void Run()
         {
         }
+
+        public void Stop()
+        {
+        }
     }
 }

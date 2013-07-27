@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ServiceProcess;
 using Autofac;
+using Pipeliner.Communication;
 using log4net;
 using Pipeliner.Business;
 using Pipeliner.Runner.Properties;
@@ -19,19 +20,23 @@ namespace Pipeliner.Runner
         /// </summary>
         public static void Main()
         {
-            log4net.Config.XmlConfigurator.Configure();
-
             AppDomain.CurrentDomain.UnhandledException += OnCurrentDomainOnUnhandledException;
             var container = GetPreconfiguredContainer();
 
             if (Environment.UserInteractive)
             {
-                container.Resolve<ApplicationRunner>().Run();
+                var application = container.Resolve<ApplicationRunner>();
+                var communication = container.Resolve<PipelinerCommunicationRunner>();
+                application.Run();
+                communication.Run();
 
                 Console.WriteLine(Resources.ServiceProgram_HintForExit);
                 do
                 {
                 } while (Console.ReadLine() != "exit");
+
+                application.Stop();
+                communication.Stop();
             }
             else
             {
@@ -55,6 +60,8 @@ namespace Pipeliner.Runner
             builder.RegisterType<PipelinerService>();
             var logger = LogManager.GetLogger(typeof(ServiceProgram));
             builder.RegisterInstance(logger).As<ILog>();
+            builder.RegisterType<ApplicationRunner>().InstancePerLifetimeScope();
+            builder.RegisterType<PipelinerCommunicationRunner>().InstancePerLifetimeScope();
             return builder.Build();
         }
 
